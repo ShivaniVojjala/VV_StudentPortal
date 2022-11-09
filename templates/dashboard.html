@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Upload</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!-- Fonts and icons -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="static/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="static/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+  <!-- CSS -->
+  <link href="static/demo/demo.css" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link rel="icon" href="static/favicon.ico">
+  <style>
+      body{
+          font-family:  Sitka heading;
+          
+        }
+   h1{
+  padding-top: 100px;
+}
+input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      
+      }
+
+  .container{
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(70, 166, 192, 0.5);
+  }
+  .input-field{
+    
+    width: 400px;
+  }
+  .log{
+    float: right;
+  }
+  </style>
+</head>
+<body >
+  <div class="log"><a  href="{{url_for('logout')}}">Logout</a></div>
+  
+  <center>
+    <h1>WELCOME TO VIDYA VAARADHI STUDENT PORTAL! </h1>
+    
+  </center>
+  
+  <div class="container" >
+  
+  <div class="card"  >
+    <div class="card-body ">
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        
+      <div class="input-field">
+        <p><center>Please fill in the details</center></p>
+        <input type="file" name="file" >
+         
+        <div><label>Vidyavaradhi Service Agreement*</label><input type="file" name="file" ></div> --></div>  <div><label>Passport copy*</label><input type="file" name="file"></div> 
+        <div><label>Transcripts from university of graduation along with intermediate and tenth certificates*</label><input type="file" name="file" ></div>
+        <div><label>Letter of Recommendation statement of purpose*</label><input type="file" name="file"></div> 
+        <div><label>Statement of purpose*</label><input type="file" name="file" ></div>
+        <div><label>Resume*</label><input type="file" name="file" ></div>
+        <div><label>Bank Statement*</label><input type="file" name="file"  ></div>
+        <div><label>Affidant of support in case of someone sponsoring the education*</label><input type="file" name="file" ></div>
+        <div><label>Test of English Fulency- Duolingo/GRE/IELTS/TOEFL/OTHERS*</label><input type="file" name="file"></div>
+        <div><label>2022-23 River Certificate of finances for international students*</label><input type="file" name="file" ></div>
+        <hr>
+        <div class="button">
+        <input type="submit" name="upload" value="Upload" class="btn btn-success">
+       </div>
+        {{msg}}
+       
+      </form>
+    </div>
+  </div>
+  <br>
+</div>
+</body>
+</html>

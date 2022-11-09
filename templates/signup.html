@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP</title>
+    <link rel="icon" href="static/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/style.css">
+    
+
+ <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.container{
+    color:#0a567c;
+    padding-top: 8px;
+          padding-bottom: 8px;
+}
+
+h1,h3{
+    color:#0a567c;
+
+}
+.data{
+  min-height: 100vh;
+  
+  
+}
+.nav-item{
+      padding-left: 100px;
+      
+    }
+   
+     .container-fluid{
+      background-color:#5595b5; 
+    border-radius: 1em;
+     
+     }
+ 
+
+</style> 
+
+</head>
+
+<body >
+
+<nav class="navbar navbar-expand-lg bg-light"style="padding-top: 0px;">
+  <div class="container-fluid">
+    <nav class="navbar bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="{{user_image2}}" alt="Logo" width="70" height="50">
+        </a>
+      </div>
+    </nav>
+     
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url_for('signup')}}">SignUp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{url_for('login')}}">Student Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{url_for('employee')}}">Employee Login</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<center>
+<div class="data">
+  <h3> Sign in if you are a new user </h3>
+  
+  <form method="POST" action="">
+    <h1> SIGN UP!</h1> 
+    {{ form.hidden_tag() }}
+         <!-- firstname -->
+         <div class="container">
+            <label  for="firstname" ><strong>First Name:</strong></label>
+             {{form.firstname}}<br>
+         </div>
+        <!-- lastname -->
+        <div class="container">
+            <label  for="lastname" ><strong>Last Name:</strong></label>
+             {{form.lastname}}<br>
+        </div>
+        <!-- username -->
+        <div class="container">
+           <label  for="username" ><strong>Username:</strong></label>
+             {{form.username}}<br>
+        </div>
+        <!-- password -->
+       <div class="container">
+             <label for="password" ><strong> Password:</strong></label>
+               {{form.password}}<br>
+      </div>
+
+<!-- Button trigger modal -->
+    <button type="submit" class="btn btn-sucess" data-bs-toggle="modal" data-bs-target="#myModal">Create</button>
+    
+<!-- Modal -->
+ <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModal" aria-hidden="true"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModal">Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        you sucessfully created an account
+      </div>
+      <div class="modal-footer">
+        
+        <a href="{{url_for('login')}}">Login?</a>
+      </div>
+    </div>
+  </div>
+</div> 
+   
+<a href="{{url_for('login')}}"> Already have an account?</a>
+</form>
+</div>
+</center>
+
+
+
+
+
+</body>
+</html>

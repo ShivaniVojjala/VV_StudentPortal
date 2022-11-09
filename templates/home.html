@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="icon" href="static/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <style>
+       
+    body{
+      background-image: url('/static/images/globe.jpg');
+      padding-top: 0px;
+    } 
+    .bg-light {
+     --bs-bg-opacity: 0;
+    }
+</style>
+
+
+</head>
+
+<body  style="font-family:Sitka heading";>
+  
+    
+    <nav class="navbar navbar-expand-lg bg-light" style="padding-top: 0px;">
+        <div class="container-fluid" >
+            <nav class="navbar bg-light">
+                <div class="container">
+                  <a class="navbar-brand" href="#">
+                    <img src="{{user_image2}}"  alt="Logo" width="70" height="50">
+                  </a>
+                </div>
+              </nav>
+          <div class="collapse navbar-collapse" id="navbarNav"  >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('home')}}" >Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('signup')}}">SignUp</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{{url_for('login')}}">Student Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{{url_for('employee')}}">Employee Login</a>
+              </li>
+             
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    <center>
+
+    <div class="mybody">
+   <h1> Hello! Welcome to VIDYA VAARADHI </h1>
+   <img src="{{user_image}}"    height="150"><br> 
+
+   <p><h2>ONE STOP DESTINATION FOR OVERSEAS EDUCATION DREAMS </h2></p>
+
+    
+    <p><h3>Sucessfully helping students fulfill their overseas education dreams across USA,UK,Canada&Australia</h3></p>
+    <p><h3>Proud Global Education Partners for&nbsp;&nbsp;<img src="{{user_image3}}"    height="100"><br>  </h3></p>
+
+   <div class="cons">
+    
+    <h5>✆Contact Us:</h5>
+    <p>Sateesh:+1(203) 587-7472(Director and Global Consultant)</p>
+    <p>Srilatha:+91 8143157666( Consultant)</p>
+    <p>Amulya:+91 8897667575( Consultant)</p>
+      
+   </div>
+
+  </div>
+<!-- <form action="/login" >
+    <div class="btn">
+    <button class=" submit-button" >Student Login</button>
+</div>
+</form>
+
+<form action="/employee" >
+    <div class="button"  >
+    <button class="submit-button" >Employee Login</button>
+</div>
+</form> -->
+<!-- 
+   <a href="{{url_for('signup')}}"> SINGUP</a> -->
+
+</center>
+</body>
+</html>

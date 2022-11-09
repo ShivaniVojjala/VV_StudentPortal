@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="icon" href="static/favicon.ico">
+    <style>
+        body {font-family:Sitka heading; 
+            font-style: italic;
+           
+            
+        }
+       
+        div {
+            width: 100%;
+         }
+
+     .container{
+        color:#0a567c;
+          padding-top: 20px;
+          padding-bottom: 20px;
+     }    
+
+     .password{
+        font-display: block;
+        color:#0a567c;
+        padding-bottom: 20px;
+     }
+
+     h1{ color:#0a567c;
+    }
+
+     
+
+     .flash{
+
+        color: red;
+     }
+
+     .button{
+        background-color:#3a677d; 
+        width:11%;
+     }
+      
+      
+    </style>
+</head>
+<body >
+    <nav class="navbar navbar-expand-lg bg-light"style="padding-top: 0px;">
+        <div class="container-fluid">
+          <nav class="navbar bg-light">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="{{user_image2}}" alt="Logo" width="70" height="50">
+              </a>
+            </div>
+          </nav>
+           
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('signup')}}">SignUp</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{{url_for('login')}}">Student Login</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link active" href="{{url_for('employee')}}">Employee Login</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link active" href="{{url_for('logout')}}">Logout</a>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <center>
+   
+{% block content %}
+    {% for message in get_flashed_messages() %}
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <div class="flash">
+            {{message}}
+          </div>
+        
+        <button    type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+
+ {% endfor %}
+
+{% endblock %} 
+
+<form method="POST" action="">
+    <h1> Employee Login</h1> 
+
+
+<div>
+{{ form.hidden_tag() }}
+<div class="container">
+
+<label  for="username"><strong>Username:</strong></label>
+
+{{form.username}}<br>
+
+</div>
+<div  class="password">
+<label for="password"><strong> Password:</strong></label>
+{{form.password}}<br>
+
+</div>
+<div class="button">
+    {{form.submit}}
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+
+
+</form>
+
+</center>
+</body>
+</html>
