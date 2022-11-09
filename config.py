@@ -1,6 +1,7 @@
-ACCOUNT_NAME = "dipi"
-ACCOUNT_KEY = "C49f7X63YYn95L8U4I9rxQZbggIHz+kZr79Gqc1UDTMnYIP5QxSwmfvLPjlUb5Fm2Jm3TA7qisol+AStK6g7Rg=="
-CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=dipi;AccountKey=C49f7X63YYn95L8U4I9rxQZbggIHz+kZr79Gqc1UDTMnYIP5QxSwmfvLPjlUb5Fm2Jm3TA7qisol+AStK6g7Rg==;EndpointSuffix=core.windows.net"
-CONTAINER = "files"
+ACCOUNT_NAME = "vvapplications"
+ACCOUNT_KEY = "jJrAOHM1tSurhje+9zaLezCg7VGJjekC8dzLkBXwerpdYjIl5wSGTpxAYuy2olCHCY2tMCMZ7Kpd+AStwjbphg=="
+
+CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=vvapplications;AccountKey=jJrAOHM1tSurhje+9zaLezCg7VGJjekC8dzLkBXwerpdYjIl5wSGTpxAYuy2olCHCY2tMCMZ7Kpd+AStwjbphg==;EndpointSuffix=core.windows.net"
+CONTAINER = "rivieruniversity"
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg'])
 MAX_CONTENT_LENGTH = 20 * 1024 * 1024    # 20 Mb limit
