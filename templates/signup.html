@@ -13,6 +13,14 @@
     
 
  <style>
+       
+           
+            
+        
+          body{
+        background-image: url('/static/images/globe.jpg');}
+        
+  
 *{
   margin: 0;
   padding: 0;
@@ -29,18 +37,21 @@ h1,h3{
     color:#0a567c;
 
 }
-.data{
+/* .data{
   min-height: 100vh;
   
   
-}
+} */
+.bg-light {
+     --bs-bg-opacity: 0;
+    }
 .nav-item{
       padding-left: 100px;
       
     }
    
      .container-fluid{
-      background-color:#5595b5; 
+      
     border-radius: 1em;
      
      }
@@ -84,6 +95,7 @@ h1,h3{
 
 
 <center>
+  <div class="block-singup">
 <div class="data">
   <h3> Sign in if you are a new user </h3>
   
@@ -128,19 +140,30 @@ h1,h3{
       <div class="modal-footer">
         
         <a href="{{url_for('login')}}">Login?</a>
+     
+     
+          
       </div>
     </div>
   </div>
 </div> 
    
 <a href="{{url_for('login')}}"> Already have an account?</a>
+
 </form>
 </div>
 </center>
 
 
-
-
+</div>
+<div class="cons">
+    
+  <h5>✆Contact Us:</h5>
+  <p>Sateesh:<a href="tel:+1(203) 587-7472">+1(203) 587-7472</a>(Director and Global Consultant)</p>
+  <p>Srilatha:<a href="tel:8143157666">+91 8143157666</a>( Consultant)</p>
+  <p>Amulya:<a href="tel:8897667575">+91 8897667575</a>( Consultant)</p>
+    
+ </div>
 
 </body>
 </html>

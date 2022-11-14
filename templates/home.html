@@ -15,17 +15,46 @@
        
     body{
       background-image: url('/static/images/globe.jpg');
+      /* filter: blur(8px);
+     -webkit-filter: blur(8px); */
+       
       padding-top: 0px;
+     
+  background-size: cover;
+      background-color: rgba(0,0,0, 0.4);
+       
     } 
     .bg-light {
      --bs-bg-opacity: 0;
     }
+    .bg-image{
+      
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a:link {
+         color: rgb(27, 6, 104);
+         background-color: transparent;
+         text-decoration: none;
+      }   
 </style>
 
 
 </head>
 
 <body  style="font-family:Sitka heading";>
+  
+  <div class="bg-image"></div>
   
     
     <nav class="navbar navbar-expand-lg bg-light" style="padding-top: 0px;">
@@ -73,26 +102,29 @@
    <div class="cons">
     
     <h5>✆Contact Us:</h5>
-    <p>Sateesh:+1(203) 587-7472(Director and Global Consultant)</p>
-    <p>Srilatha:+91 8143157666( Consultant)</p>
-    <p>Amulya:+91 8897667575( Consultant)</p>
+    <p>Sateesh:<a href="tel:+1(203) 587-7472">+1(203) 587-7472</a>(Director and Global Consultant)</p>
+    <p>Srilatha:<a href="tel:8143157666">+91 8143157666</a>( Consultant)</p>
+    <p>Amulya:<a href="tel:8897667575">+91 8897667575</a>( Consultant)</p>
       
    </div>
+  </div>
+  <hr>
+  <h3> YOU CAN CONNECT WITH US ON:</h3>
+  <div class="socialmedia">
+    
+    <a class="social-icon" href="https://instagram.com/vidyavaaradhi" target="_blank">
+      <ion-icon name="logo-instagram"></ion-icon>
+     </a>
+     
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   </div>
-<!-- <form action="/login" >
-    <div class="btn">
-    <button class=" submit-button" >Student Login</button>
-</div>
-</form>
 
-<form action="/employee" >
-    <div class="button"  >
-    <button class="submit-button" >Employee Login</button>
-</div>
-</form> -->
-<!-- 
-   <a href="{{url_for('signup')}}"> SINGUP</a> -->
+
+
+
+   
 
 </center>
 </body>

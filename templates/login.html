@@ -12,25 +12,53 @@
     <link rel="stylesheet" href="static/style.css">
     <link rel="icon" href="static/favicon.ico">
     <style>
-        body {font-family:Sitka heading; 
+        /* body {font-family:Sitka heading; 
             font-style: italic;
            
             
-        }
+        } */
+        body{
+      background-image: url('/static/images/globe.jpg');
+      /* filter: blur(8px);
+     -webkit-filter: blur(8px); */
+       
+      padding-top: 0px;
+     
+  background-size: cover;
+      background-color: rgba(0,0,0, 0.4);
+       
+    } 
+    .bg-light {
+     --bs-bg-opacity: 0;
+    }
+    .bg-image{
+      
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
        
         div {
             width: 100%;
          }
 
      .container{
-        color:#0a567c;
+        
           padding-top: 20px;
           padding-bottom: 20px;
      }    
 
      .password{
         font-display: block;
-        color:#0a567c;
+        color:#050606;
         padding-bottom: 20px;
      }
 
@@ -57,7 +85,7 @@
     }
    
      .container-fluid{
-      background-color:#5595b5; 
+      
     border-radius: 1em;
      
      }
@@ -94,6 +122,7 @@
               </li>
               
             </ul>
+            
           </div>
         </div>
       </nav>
@@ -103,10 +132,12 @@
     
     
     <center>
-   
+      <div class="block-login">
 {% block content %}
     {% for message in get_flashed_messages() %}
+   
 
+    
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <div class="flash">
             {{message}}
@@ -153,6 +184,17 @@
 
 
 <a href="{{url_for('signup')}}"> Dont have an account?Sign UP</a>
+</div>
+</div>
+<div class="cons">
+    
+  <h5>✆Contact Us:</h5>
+  <p>Sateesh:<a href="tel:+1(203) 587-7472">+1(203) 587-7472</a>(Director and Global Consultant)</p>
+  <p>Srilatha:<a href="tel:8143157666">+91 8143157666</a>( Consultant)</p>
+  <p>Amulya:<a href="tel:8897667575">+91 8897667575</a>( Consultant)</p>
+    
+ </div>
+
 </form>
 
 </center>

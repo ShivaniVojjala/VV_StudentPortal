@@ -23,7 +23,8 @@ from azure.storage.blob import ContentSettings, ContainerClient
 from threading import Thread
 import urllib.request
 
- 
+
+import pathlib
 
 app = Flask(__name__)
 
@@ -230,21 +231,26 @@ def upload():
     if request.method == 'POST':
         files = request.files.getlist('file')
         for file in files:
-
             if file and allowed_file(file.filename):
-               filename = secure_filename(file.filename)
-               file.save(filename)
-               blob_client = blob_service_client.get_blob_client(container = container, blob = filename)
-               with open(filename, "rb") as data:
-                try:
-                    blob_client.upload_blob(data, overwrite=True)
-                    msg = "Upload Done ! "
-                except:
-                    pass
+                filename =  secure_filename(file.filename)
+                file.save(filename )
+                blob_client = blob_service_client.get_blob_client(container = container, blob = filename)
+              
+                with open(filename, "rb") as data:
+                    
+                    
+
+                    try:
+
+                        blob_client.upload_blob(data, overwrite=True)
+                        msg = "Upload Done ! "
+                    except:
+                        pass
+                    
     os.remove(filename)
     return render_template("dashboard.html", msg=msg)
 
-
+ 
 
 # # dashboard1
 @app.route('/dashboard', methods=['GET','POST'])
@@ -277,6 +283,9 @@ def dashboard2():
 def logout():
     logout_user()
     return redirect(url_for('login'))
+
+
+
 
 
 

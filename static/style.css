@@ -7,7 +7,7 @@ body {font-family:Sitka heading;
               
               }
         
-        h1, h2, h3  {color: #0a567c;
+        h1, h2, h3  {color: #1f304a;
             }
 
   
@@ -33,9 +33,56 @@ body {font-family:Sitka heading;
     margin: 30px;
       width: 300px;
       
-        color: #0a567c;
+        color: #131a1e;
         font-style: italic;
         font-family:Sitka heading;
-        border-radius: 1em;}
+        border-radius: 1em;
+      padding-bottom: 20px;}
         
-       
+        .social-icon{
+          color: rgb(158, 30, 73);
+          height: 100;
+          font-size: 64px;
+          text-decoration: none;
+        }
+        .block-login{
+          border-style: solid;
+    
+    margin: 30px;
+      width: 300px;
+      
+        color: #131a1e;
+        font-style: italic;
+        font-family:Sitka heading;
+        border-radius: 1em;
+      padding-bottom: 20px;
+
+        }
+        .block-singup{
+          border-style: solid;
+    
+    margin: 20px;
+      width: 500px;
+      height: auto;
+      
+        color: #131a1e;
+        font-style: italic;
+        font-family:Sitka heading;
+        border-radius: 1em;
+      padding-bottom: 20px;
+
+        }
+        .block-employee{
+          border-style: solid;
+    
+    margin: 20px;
+      width: 500px;
+      height: auto;
+      
+        color: #131a1e;
+        font-style: italic;
+        font-family:Sitka heading;
+        border-radius: 1em;
+      padding-bottom: 20px;
+
+        }
