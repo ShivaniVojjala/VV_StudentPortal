@@ -247,6 +247,7 @@ def upload():
                     except:
                         pass
                     
+    
     os.remove(filename)
     return render_template("dashboard.html", msg=msg)
 
